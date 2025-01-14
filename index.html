@@ -10,114 +10,115 @@
     </head>
 
     <body>
-        <div class="background">
-
-            <!-- Linha Superior -->
-            <div class="linha-horizontal"></div>
-
-            <header>
-                <div class="background">
-                    <div class="formatacao_corpo">
-                        <h1>João Vitor Figueira Montenegro Pereira</h1>
-                        <p>
-                            <strong>Telefone:</strong> (31) 98374-9670<br>
-                            <strong>Email:</strong> jvfmpereira@gmail.com<br>
-                            <strong>Endereço:</strong> Rua Mário Rodrigues Gomes, 81. Bangu, Rio de Janeiro - RJ<br>
-                            <strong>LinkedIn:</strong> https://www.linkedin.com/in/joaovfmpereira/<br>
-                            <strong>GitHub:</strong> https://github.com/Ragrora<br>
-                        </p>
-                    </div>
-                </div>
-            </header>
-
-            <!-- Linha Inferior -->
-            <div class="linha-horizontal"></div>
+        <!-- Navegação -->
+        <header>
+            <!-- Menu de navegação à esquerda -->
+            <div class="menu-left">
+                <a href="#" data-translate="headInfo1"><span>Currículo</span></a>
+                <a href="#" data-translate="headInfo2"><span>Projetos</span></a>
+                <a href="#" data-translate="headInfo3"><span>Créditos</span></a>
+            </div>
         
-
-            <!-- Corpo do Currículo -->
-            <main>
-                <div class="formatacao_corpo">
-                    <h2>Resumo Profissional/Sobre</h2>
-                    <p>
-                        Engenheiro Mecânico com sólida experiência em automação de processos, 
-                        análise de dados e desenvolvimento de soluções tecnológicas. Experiência 
-                        em RPA (Automação de Processos Robóticos), Web Scraping e análise de 
-                        grandes volumes de dados utilizando SQL (PostgreSQL e Access). Possuo 
-                        habilidades avançadas em Python, VBA e Excel, com forte domínio nas 
-                        bibliotecas Pandas, OpenPyXL, Selenium, Matplotlib, NumPy, Pyodbc e Scrapy. 
-                        Além disso, tenho conhecimento intermediário em Power BI para criação de 
-                        dashboards e relatórios dinâmicos.
-                    </p>
-
-                    <h2>Formação Acadêmica</h2>
-
-                    <p>
-                        Bacharel em Engenharia Mecânica pela Universidade Federal de Minas Gerais - UFMG
-                    </p>
-
-                    <h2>Competências</h2>
-
-                    <p>
-                        Conhecimento avançado em: Python, VBA e Pacote Office.<br>
-                        Conhecimento intermediário em: Power BI, UiPath, SQL, NoSQL, Git e GitHub.<br>
-                        Conhecimento básico em: HTML, CSS e JavaScript.
-                    </p>
-
-                    <h2>Idiomas</h2>
-
-                    <p>
-                        Inglês - avançado<br>
-                        Espanhol - intermediário<br>
-                        Francês - básico<br>
-                    </p>
-
-                    <h2>Experiência	Profissional</h2>
-
-                    <h3>Epiroc - Estagiário (fevereiro/2023 - setembro/2024).</h3>
-
-                    <p>
-                        Funções: Desenvolvimento de scripts para extração de dados de relatórios 
-                        desenvolvidos pela a empresa, objetivando a automatização da criação de 
-                        contratos e indicadores de desempenho local. Criação de macros VBA para 
-                        agilizar atividades rotineiras e scripts python para manipulação de grandes 
-                        volumes de dados.
-                    </p>
-
-                    <h2>Certificados</h2>
-                    </div>  
-
-                    <div class="container">
-                        <img src="img/0157b0037f792ca8cdc9e8a40dec6f61.jpg" alt="KKKKKKKKKKKKKK">
+            <!-- Menu de idiomas e temas à direita -->
+            <div class="menu-right">
+                <!-- Menu de Idiomas -->
+                <div class="dropdown">
+                    <button class="dropdown-button">
+                        <img id="language-flag" src="img/brazil.png" alt="pt-br">
+                    </button>
+                    <div class="dropdown-content">
+                        <button onclick="changeLanguage('pt-br')" data-language="pt-br">
+                            <img src="img/brazil.png" alt="Português">
+                            <span data-translate="headInfo4">Português</span>
+                        </button>
+                        <button onclick="changeLanguage('es')" data-language="es">
+                            <img src="img/spain.png" alt="Espanhol">
+                            <span data-translate="headInfo5">Espanhol</span>
+                        </button>
+                        <button onclick="changeLanguage('en')" data-language="en">
+                            <img src="img/usa.png" alt="Inglês">
+                            <span data-translate="headInfo6">Inglês</span>
+                        </button>
                     </div>
                 </div>
-            </main>
+                <!-- Botão de temas -->
+                <button class="button-theme" onclick="changeTheme(this)" data-mode="lightMode">
+                    <img id="themeIcon" src="img/lightMode.png" alt="lightMode">
+                </button>
+            </div>
+        </header>
+        <br>
 
-            <!-- Easteregg -->
-            <script>
-                let timer;
-                let numero_de_cliques = 0;
+        <!-- Corpo do Currículo -->
+        <main>
+            <!-- Linha Superior -->
+            <div class="linhaHorizontal"></div>
+            <h1>João Vitor Figueira Montenegro Pereira</h1>
+            <p>
+                <strong data-translate="bodyInfo1"></strong> (31) 98374-9670<br>
+                <strong data-translate="bodyInfo2"></strong> jvfmpereira@gmail.com<br>
+                <strong data-translate="bodyInfo3"></strong> Rua Mário Rodrigues Gomes, 81. Bangu, Rio de Janeiro - RJ<br>
+                <strong data-translate="bodyInfo4"></strong> https://www.linkedin.com/in/joaovfmpereira/<br>
+                <strong data-translate="bodyInfo5"></strong> https://github.com/Ragrora<br>
+            </p>
+            <!-- Linha Inferior -->
+            <div class="linhaHorizontal"></div>
+            <h2 data-translate="mainTitulo1"></h2>
+            <p data-translate="mainTexto1P1"></p>
+            <p data-translate="mainTexto1P2"></p>
+            <p data-translate="mainTexto1P3"></p>
 
-                const container = document.querySelector('.container')
+            <h2 data-translate="mainTitulo2"></h2>
 
-                function resetContador() {
-                    numero_de_cliques = 0;
-                    clearTimeout(timer);
-                }
+            <p data-translate="mainTexto2"></p>
 
-                document.addEventListener('click', () => {
-                    numero_de_cliques++;
+            <h2 data-translate="mainTitulo3"></h2>
 
-                    clearTimeout(timer);
+            <p data-translate="mainTexto3">
+                <p data-translate="mainTexto3P1"></p>
+                <p data-translate="mainTexto3P2"></p>
+                <p data-translate="mainTexto3P3"></p>
+            </p>
 
-                    timer = setTimeout(resetContador, 3000);
+            <h2 data-translate="mainTitulo4"></h2>
 
-                    if (numero_de_cliques === 10) {
-                        container.style.display = 'block';
-                        container.scrollIntoView({behavior: 'smooth'})
-                    }
-                });
-            </script>
-        </div>
-    </body>
-    
+            <p data-translate="mainTexto4">
+                <p data-translate="mainTexto4P1"></p>
+                <p data-translate="mainTexto4P2"></p>
+                <p data-translate="mainTexto4P3"></p>
+            </p>
+
+            <h2 data-translate="mainTitulo5"></h2>
+
+            <h3 data-translate="mainTexto5T1"></h3>
+
+            <p data-translate="mainTexto5P1"></p>
+
+            <h2 data-translate="mainTitulo6"></h2>
+            </div>  
+
+            <div class="easteregg">
+                <img src="img/0157b0037f792ca8cdc9e8a40dec6f61.jpg" alt="KKKKKKKKKKKKKK">
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <!-- <footer>
+            <p><a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by Freepik - Flaticon</a></p>
+            <p><a href="https://www.flaticon.com/free-icons/moon-and-stars" title="moon and stars icons">Moon and stars icons created by Tempo_doloe - Flaticon</a></p>
+            <p><a href="https://www.flaticon.com/free-icons/brazil" title="brazil icons">Brazil icons created by Hight Quality Icons - Flaticon</a></p>
+            <p><a href="https://www.flaticon.com/free-icons/united-states" title="united states icons">United states icons created by Hight Quality Icons - Flaticon</a></p>
+            <p><a href="https://www.flaticon.com/free-icons/spain" title="spain icons">Spain icons created by Hight Quality Icons - Flaticon</a></p>
+        </footer>
+    </body>     -->
+
+    <!-- Easteregg -->
+    <script src="scripts/easteregg.js"></script>
+
+    <!-- Idiomas -->
+    <script src="scripts/tradutor.js"></script>
+
+    <!-- Theme -->
+    <script src="scripts/tema.js"></script>
+
 </html>
