@@ -30,9 +30,7 @@ function changeLanguage(language) {
             "bodyInfo5": "GitHub:",
 
             "mainTitulo1": "Resumo Profissional/Sobre",
-            "mainTexto1P1": "Graduado em Engenharia Mecânica pela Universidade Federal de Minas Gerais (UFMG), possuo sólida experiência em Pesquisa e Desenvolvimento (P&D), adquirida durante minha Iniciação Científica na área de Bioengenharia. Nesse período, me aproximei da programação por meio da simulação computacional e desenvolvimento de Algoritmos Genéticos (GA) para otimizar componentes de projeto, aprimorando minhas habilidades em modelagem e resolução de problemas complexos.",
-            "mainTexto1P2": "Durante meu estágio, aprofundei meus conhecimentos em Tecnologia da Informação, atuando com análise de dados e automação de processos (RPA). Desenvolvi soluções que aumentaram a eficiência operacional e reduziram significativamente os tempos de execução.",
-            "mainTexto1P3": "Atualmente, estou expandindo minhas competências em desenvolvimento Frontend, com foco em consolidar minha atuação no setor de tecnologia e potencializar minha habilidade na manipulação e visualização de dados obtidos da web.",
+            "mainTexto1": "Graduado em Engenharia Mecânica, me aproximei da programação por meio do desenvolvimento de algoritmos genéticos e simulações computacionais durante minha formação. Durante o estágio, atuei como desenvolvedor de RPA e também desempenhei funções na análise de dados. Atualmente, busco me consolidar no desenvolvimento RPA e me aperfeiçoar na área de dados.",
             
             "mainTitulo2": "Formação Acadêmica",
             "mainTexto2": "Bacharel em Engenharia Mecânica pela Universidade Federal de Minas Gerais - UFMG",
@@ -68,10 +66,8 @@ function changeLanguage(language) {
             "bodyInfo5": "GitHub:",
         
             "mainTitulo1": "Resumen Profesional/Sobre",        
-            "mainTexto1P1": "Graduado en Ingeniería Mecánica por la Universidad Federal de Minas Gerais (UFMG), poseo una sólida experiencia en Investigación y Desarrollo (I+D), adquirida durante mi Iniciación Científica en el área de Bioingeniería. Durante este período, me acerqué a la programación mediante la simulación computacional y el desarrollo de Algoritmos Genéticos (GA) para optimizar componentes de diseño, mejorando mis habilidades en modelado y resolución de problemas complejos.",
-            "mainTexto1P2": "Durante mi pasantía, profundicé mis conocimientos en Tecnología de la Información, trabajando con análisis de datos y automatización de procesos (RPA). Desarrollé soluciones que aumentaron la eficiencia operativa y redujeron significativamente los tiempos de ejecución.",
-            "mainTexto1P3": "Actualmente, estoy ampliando mis competencias en desarrollo Frontend, con un enfoque en consolidar mi actuación en el sector tecnológico y potenciar mi habilidad en la manipulación y visualización de datos obtenidos de la web.",
-
+            "mainTexto1": "Graduado en Ingeniería Mecánica, me interesé por la programación a través del desarrollo de algoritmos genéticos y simulaciones computacionales durante mi formación. Durante mi pasantía, trabajé como desarrollador de RPA y también desempeñé funciones en análisis de datos. Actualmente, busco consolidarme en el desarrollo de RPA y perfeccionarme en el área de datos.",
+        
             "mainTitulo2": "Formación Académica",
             "mainTexto2": "Licenciado en Ingeniería Mecánica por la Universidad Federal de Minas Gerais - UFMG",
             
@@ -106,9 +102,7 @@ function changeLanguage(language) {
             "bodyInfo5": "GitHub:",
         
             "mainTitulo1": "Professional Summary/About Me",        
-            "mainTexto1P1": "Graduated in Mechanical Engineering from the Federal University of Minas Gerais (UFMG), I have solid experience in Research and Development (R&D), acquired during my Scientific Initiation in the field of Bioengineering. During this period, I was introduced to programming through computational simulation and the development of Genetic Algorithms (GA) to optimize design components, enhancing my skills in modeling and solving complex problems.",
-            "mainTexto1P2": "During my internship, I deepened my knowledge in Information Technology, working with data analysis and process automation (RPA). I developed solutions that increased operational efficiency and significantly reduced execution times.",
-            "mainTexto1P3": "Currently, I am expanding my skills in Frontend development, focusing on consolidating my role in the technology sector and enhancing my ability to manipulate and visualize data obtained from the web.",
+            "mainTexto1": "Graduated in Mechanical Engineering, I became interested in programming through the development of genetic algorithms and computational simulations during my studies. During my internship, I worked as an RPA developer and also took on data analysis functions. Currently, I am looking to consolidate my career in RPA development and further improve my skills in the data field.",
             
             "mainTitulo2": "Academic Background",
             "mainTexto2": "Bachelor's Degree in Mechanical Engineering from the Federal University of Minas Gerais - UFMG",

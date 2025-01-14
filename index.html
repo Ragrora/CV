@@ -7,18 +7,30 @@
         <title>CV - João Pereira</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/estilo.css">
+
+        <!-- Traduzir -->
+        <script src="scripts/traduzirPagina.js"></script>
+
+        <!-- Tema -->
+        <script src="scripts/mudarTema.js"></script>
     </head>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            validarTema(document.getElementById('buttonTheme').dataset.mode)
+        })
+    </script>
 
     <body>
         <!-- Navegação -->
         <header>
             <!-- Menu de navegação à esquerda -->
             <div class="menuLeft">
-                <a href="#" data-translate="headInfo1"><span>Currículo</span></a>
-                <a href="#" data-translate="headInfo2"><span>Projetos</span></a>
-                <a href="#" data-translate="headInfo3"><span>Créditos</span></a>
+                <a href="index.html" data-translate="headInfo1"><span>Currículo</span></a>
+                <a href="projetos.html" data-translate="headInfo2"><span>Projetos</span></a>
+                <a href="creditos.html" data-translate="headInfo3"><span>Créditos</span></a>
             </div>
-        
+
             <!-- Menu de idiomas e temas à direita -->
             <div class="menuRight">
                 <!-- Menu de Idiomas -->
@@ -42,11 +54,12 @@
                     </div>
                 </div>
                 <!-- Botão de temas -->
-                <button class="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
+                <button class="buttonTheme" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
                     <img id="themeIcon" src="img/lightMode.png" alt="lightMode">
                 </button>
             </div>
         </header>
+
         <br>
 
         <!-- Corpo do Currículo -->
@@ -64,9 +77,7 @@
             <!-- Linha Inferior -->
             <div class="linhaHorizontal"></div>
             <h2 data-translate="mainTitulo1"></h2>
-            <p data-translate="mainTexto1P1"></p>
-            <p data-translate="mainTexto1P2"></p>
-            <p data-translate="mainTexto1P3"></p>
+            <p data-translate="mainTexto1"></p>
 
             <h2 data-translate="mainTitulo2"></h2>
 
@@ -109,16 +120,9 @@
             <p><a href="https://www.flaticon.com/free-icons/brazil" title="brazil icons">Brazil icons created by Hight Quality Icons - Flaticon</a></p>
             <p><a href="https://www.flaticon.com/free-icons/united-states" title="united states icons">United states icons created by Hight Quality Icons - Flaticon</a></p>
             <p><a href="https://www.flaticon.com/free-icons/spain" title="spain icons">Spain icons created by Hight Quality Icons - Flaticon</a></p>
-        </footer>
-    </body>     -->
+        </footer> -->
+    </body>
 
     <!-- Easteregg -->
     <script src="scripts/easteregg.js"></script>
-
-    <!-- Idiomas -->
-    <script src="scripts/tradutor.js"></script>
-
-    <!-- Theme -->
-    <script src="scripts/tema.js"></script>
-
 </html>

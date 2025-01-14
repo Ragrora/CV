@@ -1,5 +1,5 @@
 function changeTheme(button) {
-    const mode = button.dataset.mode;
+    const mode = button.dataset.mode
     const themeIcon = document.getElementById("themeIcon");
     const root = document.documentElement;
 
@@ -27,3 +27,13 @@ function changeTheme(button) {
 
     localStorage.setItem("mode", button.dataset.mode);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedMode = localStorage.getItem("mode") || "lightMode";
+    const button = document.getElementById('buttonTheme');
+
+    // Verifica se o modo salvo é diferente do modo atual
+    if (button.dataset.mode !== savedMode) {
+        changeTheme(button);
+    }
+});

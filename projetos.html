@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <!--Clique 10 vezes na página-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CV - João Pereira</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilo.css">
+
+        <!-- Traduzir -->
+        <script src="scripts/traduzirPagina.js"></script>
+
+        <!-- Tema -->
+        <script src="scripts/mudarTema.js"></script>
+    </head>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            validarTema(document.getElementById('buttonTheme').dataset.mode)
+        })
+    </script>
+
+    <body>
+        <!-- Navegação --> 
+        <header>
+            <!-- Menu de navegação à esquerda -->
+            <div class="menuLeft">
+                <a href="index.html" data-translate="headInfo1"><span>Currículo</span></a>
+                <a href="projetos.html" data-translate="headInfo2"><span>Projetos</span></a>
+                <a href="creditos.html" data-translate="headInfo3"><span>Créditos</span></a>
+            </div>
+        
+            <!-- Menu de idiomas e temas à direita -->
+            <div class="menuRight">
+                <!-- Menu de Idiomas -->
+                <div class="dropdown">
+                    <button class="dropdownButton">
+                        <img id="languageFlag" src="img/flagBrazil.png" alt="pt-br">
+                    </button>
+                    <div class="dropdownContent">
+                        <button onclick="changeLanguage('pt-br')" data-language="pt-br">
+                            <img src="img/flagBrazil.png" alt="Português">
+                            <span data-translate="headInfo4">Português</span>
+                        </button>
+                        <button onclick="changeLanguage('es')" data-language="es">
+                            <img src="img/flagSpain.png" alt="Espanhol">
+                            <span data-translate="headInfo5">Espanhol</span>
+                        </button>
+                        <button onclick="changeLanguage('en')" data-language="en">
+                            <img src="img/flagUsa.png" alt="Inglês">
+                            <span data-translate="headInfo6">Inglês</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Botão de temas -->
+                <button class="buttonTheme" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
+                    <img id="themeIcon" src="img/lightMode.png" alt="lightMode">
+                </button>
+            </div>
+        </header>
+        <br>
+    </body>
+
+    <!-- Easteregg -->
+    <script src="scripts/easteregg.js"></script>
+</html>
