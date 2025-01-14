@@ -14,38 +14,29 @@ html {background-color: var(--background); color: var(--font);}
     header {display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: var(--header);}
 
     /* Configuração do menu esquerdo */
-        .menu-left {display: flex; gap: 10px;}
-        .menu-left a {text-decoration: none; color: var(--font); font-weight: bold; padding: 1% 3% 1% 3%; text-align: left;}
-        .menu-left a:hover {background-color: var(--background);}
+        .menuLeft {display: flex; flex-direction: row; gap: 10px;}
+        .menuLeft a {display: flex; justify-content: center; align-items: center; width: 100px; height: 40px; background-color: var(--header); text-decoration: none; color: var(--font); font-weight: bold;}
+        .menuLeft a:hover {background-color: var(--background);}
 
     /* Configuração do menu direito */
-        .menu-right {display: flex; gap: 25px;} 
-        .menu-right img {width: 20px; margin: 0;}
+        .menuRight {display: flex; gap: 25px;} 
+        .menuRight img {width: 20px; margin: 0;}
 
         /* Configuração do menu de idiomas */
-            .dropdown {position: relative;}
-            .dropdown-button {background-color: var(--header); cursor: pointer; border-radius: 100%; padding: 25%;}
-            .dropdown-content {display: none; position: fixed; right: 0; background-color: var(--paperColor); box-shadow: 0px 8px 16px var(--header); border-radius: 5px; z-index: 1; width: 125px;}
-            .dropdown-content button {background-color: var(--paperColor); color: var(--font); width: 100%; text-decoration: none; padding: 10px 15px; display: flex; justify-content: center; border-radius: none; gap: 10px; cursor: pointer;}
-            .dropdown-content button:hover {background-color: var(--background);}
-            .dropdown:hover .dropdown-content {display: block;}
+            .menuRight .dropdown {position: relative;}
+            .menuRight .dropdownButton {background-color: var(--header); cursor: pointer; border-radius: 100%; padding: 25%;}
+            .menuRight .dropdownContent {display: none; position: fixed; right: 0; background-color: var(--paperColor); box-shadow: 0px 8px 16px var(--header); border-radius: 5px; z-index: 1; width: 125px;}
+            .menuRight .dropdownContent button {background-color: var(--background); color: var(--font); width: 100%; text-decoration: none; padding: 10px 15px; display: flex; justify-content: center; border-radius: none; gap: 10px; cursor: pointer;}
+            .menuRight .dropdownContent button:hover {background-color: var(--header);}
+            .menuRight .dropdown:hover .dropdownContent {display: block;}
         
         /* Botão de tema claro/escuro */
-            .button-theme {border-radius: 100%; padding: 10%; background-color: var(--header);}
-            .button-theme:hover {background-color: var(--background);}
+            .menuRight .buttonTheme {border-radius: 100%; padding: 10%; background-color: var(--header);}
+            .menuRight .buttonTheme:hover {background-color: var(--background);}
 
 /* Configurações Main */
 
-    main {
-        width: 96%;
-        margin: auto;
-        padding: 2%;
-        display: block;                
-        text-align: justify;
-
-        max-width: 595px;
-        background-color: var(--paperColor);
-    }
+    main {width: 96%; margin: auto; padding: 2%; display: block; text-align: justify; max-width: 595px; background-color: var(--paperColor);}
 
     h1 {font-size: larger; text-align: left; padding-top: 5px;  padding-bottom: 2.5px;}
     h2 {font-size: large; text-align: left; padding-top: 5px; padding-bottom: 2.5px;}
@@ -56,16 +47,7 @@ html {background-color: var(--background); color: var(--font);}
     .easteregg{display: none; margin-top: 20px; max-width: 100%; height: auto;}
 
 /* Confiurações Footer */
-    footer {
-        width: 96%;
-        margin: auto;
-        padding: 2%;
-        display: block;                
-        text-align: justify;
-
-        max-width: 595px;
-        background-color: none;
-    }
+    footer {width: 96%; margin: auto; padding: 2%; display: block; text-align: justify; max-width: 595px; background-color: none;}
 
 /* Configuraçoes utilitários */
 
