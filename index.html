@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="pt-BR">
     <!--Clique 10 vezes na página-->
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CV - João Pereira</title>
+        <title>Portifólio - João Pereira</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/estilo.css">
 
@@ -12,117 +12,120 @@
         <script src="scripts/traduzirPagina.js"></script>
 
         <!-- Tema -->
-        <script src="scripts/mudarTema.js"></script>
+        <!-- <script src="scripts/mudarTema.js"></script> -->
+
+        <!-- Scroll -->
+         <script src="scripts/scroll.js"></script>
+
+         <!-- Ativar botão -->
+         <!-- <script src="scripts/buttonActive.js"></script> -->
+
+         <!-- Janela ativa -->
+        <!-- <script src="scripts/activeSection.js"></script> -->
     </head>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            validarTema(document.getElementById('buttonTheme').dataset.mode)
-        })
-    </script>
-
     <body>
-        <!-- Navegação -->
+        <!-- Header -->
         <header>
-            <!-- Menu de navegação à esquerda -->
-            <div class="menuLeft">
-                <a href="index.html" data-translate="headInfo1"><span>Currículo</span></a>
-                <a href="projetos.html" data-translate="headInfo2"><span>Projetos</span></a>
-                <a href="creditos.html" data-translate="headInfo3"><span>Créditos</span></a>
-            </div>
-
-            <!-- Menu de idiomas e temas à direita -->
-            <div class="menuRight">
-                <!-- Menu de Idiomas -->
-                <div class="dropdown">
-                    <button class="dropdownButton">
-                        <img id="languageFlag" src="img/flagBrazil.png" alt="pt-br">
-                    </button>
-                    <div class="dropdownContent">
-                        <button onclick="changeLanguage('pt-br')" data-language="pt-br">
-                            <img src="img/flagBrazil.png" alt="Português">
-                            <span data-translate="headInfo4">Português</span>
-                        </button>
-                        <button onclick="changeLanguage('es')" data-language="es">
-                            <img src="img/flagSpain.png" alt="Espanhol">
-                            <span data-translate="headInfo5">Espanhol</span>
-                        </button>
-                        <button onclick="changeLanguage('en')" data-language="en">
-                            <img src="img/flagUsa.png" alt="Inglês">
-                            <span data-translate="headInfo6">Inglês</span>
-                        </button>
-                    </div>
+            <div class="menu">
+                <!-- Menu de navegação à esquerda -->
+                <div class="menuLeft">
+                    <button data-translate="headInfo1" onclick="scrollInto('about')">Sobre</button>
+                    <button data-translate="headInfo2" onclick="scrollInto('skill')">Habilidades</button>
+                    <button data-translate="headInfo3" onclick="scrollInto('project')">Projetos</button>
+                    <button data-translate="headInfo4" onclick="scrollInto('contact')">Contatos</button>
                 </div>
-                <!-- Botão de temas -->
-                <button class="buttonTheme" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
-                    <img id="themeIcon" src="img/lightMode.png" alt="lightMode">
-                </button>
+
+                <div class="linhaVertical"></div>
+
+                <!-- Menu de idiomas e temas à direita -->
+                <div class="menuRight">
+
+                    <!-- Menu de Idiomas -->
+                    <div class="dropdown">
+                        <button class="headerButton">
+                            <img id="languageFlag" src="img/flagBrazil.png" alt="pt-br">
+                        </button>
+                        <div class="dropdownContent">
+                            <button onclick="changeLanguage('pt-br')" data-language="pt-br">
+                                <img src="img/flagBrazil.png" alt="Português">
+                                <span data-translate="headInfo5">Português</span>
+                            </button>
+                            <button onclick="changeLanguage('es')" data-language="es">
+                                <img src="img/flagSpain.png" alt="Espanhol">
+                                <span data-translate="headInfo6">Espanhol</span>
+                            </button>
+                            <button onclick="changeLanguage('en')" data-language="en">
+                                <img src="img/flagUsa.png" alt="Inglês">
+                                <span data-translate="headInfo7">Inglês</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botão de temas -->
+                    <button class="headerButton" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
+                        <img id="themeIcon" src="img/darkMode.png" alt="lightMode">
+                    </button>
+                </div>
             </div>
+            <div class="linhaHorizontal"></div>
         </header>
 
-        <br>
-
-        <!-- Corpo do Currículo -->
         <main>
-            <!-- Linha Superior -->
-            <div class="linhaHorizontal"></div>
-            <h1>João Vitor Figueira Montenegro Pereira</h1>
-            <p>
-                <strong data-translate="bodyInfo1"></strong> (31) 98374-9670<br>
-                <strong data-translate="bodyInfo2"></strong> jvfmpereira@gmail.com<br>
-                <strong data-translate="bodyInfo3"></strong> Rua Mário Rodrigues Gomes, 81. Bangu, Rio de Janeiro - RJ<br>
-                <strong data-translate="bodyInfo4"></strong> https://www.linkedin.com/in/joaovfmpereira/<br>
-                <strong data-translate="bodyInfo5"></strong> https://github.com/Ragrora<br>
-            </p>
-            <!-- Linha Inferior -->
-            <div class="linhaHorizontal"></div>
-            <h2 data-translate="mainTitulo1"></h2>
-            <p data-translate="mainTexto1"></p>
+            <div class="container">
 
-            <h2 data-translate="mainTitulo2"></h2>
+                <!-- Sobre -->
+                <section class="section">
+                    <div id="about" class="about">
+                        <p data-translate="aboutTextP1">xxxx</p>
+                        <p data-translate="aboutTextP2">xxxx</p>
+                    </div>
+                </section>
 
-            <p data-translate="mainTexto2"></p>
+                <!-- Competências -->
+                <section class="section">
+                    <div id="skill" class="skill">
+                        <div class="menu">
+                            <button class="active">Linguagens</button>
+                            <div class="linhaVertical"></div>
+                            <button>Programas</button>
+                        </div>
 
-            <h2 data-translate="mainTitulo3"></h2>
+                        <div class="linhaHorizontal"></div>
 
-            <p data-translate="mainTexto3">
-                <p data-translate="mainTexto3P1"></p>
-                <p data-translate="mainTexto3P2"></p>
-                <p data-translate="mainTexto3P3"></p>
-            </p>
+                        <div class="container">
+                            <div class="skillContainer">
+                                <div class="skillLogo">
+                                    <img src="img/logoPython.png" alt="" class="border">
+                                    <div class="dropdownContent">
+                                        <img src="img/logoPandas.png" alt="">
+                                        <img src="img/logoSeaborn.png" alt="">
+                                        <img src="img/logoMatplotlib.png" alt="">
+                                        <img src="img/logoSelenium.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="skillLogo"><img src="img/logoR.png" alt=""></div>
+                                <div class="skillLogo"><img src="img/logoVBA.png" alt=""></div>
+                                <div class="skillLogo"><img src="img/logoJS.png" alt=""></div>
+                                <div class="skillLogo"><img src="img/logoHTML.png" alt=""></div>
+                                <div class="skillLogo"><img src="img/logoCSS.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-            <h2 data-translate="mainTitulo4"></h2>
+                <!-- Projetos -->
+                <section class="section">
+                    <div id="project">Projetos</div>
+                </section>
 
-            <p data-translate="mainTexto4">
-                <p data-translate="mainTexto4P1"></p>
-                <p data-translate="mainTexto4P2"></p>
-                <p data-translate="mainTexto4P3"></p>
-            </p>
-
-            <h2 data-translate="mainTitulo5"></h2>
-
-            <h3 data-translate="mainTexto5T1"></h3>
-
-            <p data-translate="mainTexto5P1"></p>
-
-            <h2 data-translate="mainTitulo6"></h2>
-            </div>  
-
-            <div class="easteregg">
-                <img src="img/0157b0037f792ca8cdc9e8a40dec6f61.jpg" alt="KKKKKKKKKKKKKK">
+                <!-- Contatos -->
+                <section class="section">
+                    <div  id="contact">Contatos</div>
+                </section>
             </div>
         </main>
-
-        <!-- Footer -->
-        <!-- <footer>
-            <p><a href="https://www.flaticon.com/free-icons/weather" title="weather icons">Weather icons created by Freepik - Flaticon</a></p>
-            <p><a href="https://www.flaticon.com/free-icons/moon-and-stars" title="moon and stars icons">Moon and stars icons created by Tempo_doloe - Flaticon</a></p>
-            <p><a href="https://www.flaticon.com/free-icons/brazil" title="brazil icons">Brazil icons created by Hight Quality Icons - Flaticon</a></p>
-            <p><a href="https://www.flaticon.com/free-icons/united-states" title="united states icons">United states icons created by Hight Quality Icons - Flaticon</a></p>
-            <p><a href="https://www.flaticon.com/free-icons/spain" title="spain icons">Spain icons created by Hight Quality Icons - Flaticon</a></p>
-        </footer> -->
     </body>
-
     <!-- Easteregg -->
     <script src="scripts/easteregg.js"></script>
 </html>

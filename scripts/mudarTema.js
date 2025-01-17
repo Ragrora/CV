@@ -1,11 +1,16 @@
 function changeTheme(button) {
     const mode = button.dataset.mode
     const themeIcon = document.getElementById("themeIcon");
+    const downloadIcon = document.getElementById("downloadIcon");
     const root = document.documentElement;
 
     if (mode === "lightMode") {
         themeIcon.src = "img/darkMode.png";
         themeIcon.alt = "darkMode";
+
+        downloadIcon.src = "img/downloadDark.png"
+        downloadIcon.alt = "download"
+
         button.dataset.mode = "darkMode";
 
         root.style.setProperty('--font', '#808080')
@@ -17,6 +22,10 @@ function changeTheme(button) {
     } else if (mode === "darkMode") {
         themeIcon.src = "img/lightMode.png";
         themeIcon.alt = "lightMode";
+
+        downloadIcon.src = "img/downloadLight.png"
+        downloadIcon.alt = "download"
+
         button.dataset.mode = "lightMode";
 
         root.style.setProperty('--font', '#000000')

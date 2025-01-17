@@ -1,41 +1,34 @@
 <!DOCTYPE html>
 
 <html>
-    <!--Clique 10 vezes na página-->
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CV - João Pereira</title>
+        <title>header</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/teste.css">
 
         <!-- Traduzir -->
         <script src="scripts/traduzirPagina.js"></script>
 
         <!-- Tema -->
         <script src="scripts/mudarTema.js"></script>
+    
     </head>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            validarTema(document.getElementById('buttonTheme').dataset.mode)
-        })
-    </script>
-
     <body>
-        <!-- Navegação --> 
         <header>
             <!-- Menu de navegação à esquerda -->
             <div class="menuLeft">
-                <a href="index.html" data-translate="headInfo1"><span>Currículo</span></a>
+                <a href="header.html" data-translate="headInfo1"><span>Currículo</span></a>
                 <a href="projetos.html" data-translate="headInfo2"><span>Projetos</span></a>
-                <a href="creditos.html" data-translate="headInfo3"><span>Créditos</span></a>
             </div>
-        
+
             <!-- Menu de idiomas e temas à direita -->
             <div class="menuRight">
+
                 <!-- Menu de Idiomas -->
                 <div class="dropdown">
-                    <button class="dropdownButton">
+                    <button class="headerButton">
                         <img id="languageFlag" src="img/flagBrazil.png" alt="pt-br">
                     </button>
                     <div class="dropdownContent">
@@ -53,15 +46,17 @@
                         </button>
                     </div>
                 </div>
+
                 <!-- Botão de temas -->
-                <button class="buttonTheme" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
+                <button class="headerButton" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
                     <img id="themeIcon" src="img/lightMode.png" alt="lightMode">
+                </button>
+
+                <!-- Botão de download -->
+                <button class="headerButton">
+                    <img id="downloadIcon" src="img/downloadLight.png" alt="Download">
                 </button>
             </div>
         </header>
-        <br>
     </body>
-
-    <!-- Easteregg -->
-    <script src="scripts/easteregg.js"></script>
 </html>

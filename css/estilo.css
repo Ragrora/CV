@@ -1,55 +1,80 @@
 :root {
-    --font: #000000; /* var(--font) */
-    --header: #808080; /* var(--header) */
-    --background: #d3d3d3; /* var(--background) */
-    --paperColor: #f5f5f5; /* var(--paperColor) */
+    --headerBackground: #141414; /* var(--header) */
+
+    --pageBackground: #000000;
+
+    --paperBackground: #282828;
+
+    --font: #dddddd;
+
+    --line: #7a08ec;
 }
 
 * {margin: 0; border: 0; padding: 0;}
 
-html {background-color: var(--background); color: var(--font);}
+html {font-family: Arial, Helvetica, sans-serif; color: var(--font); background-color: var(--pageBackground);}
+
+body {margin: 0; text-align: justify; overflow: hidden;}
+
+body .dropdown {position: relative; margin: auto;}
+body .dropdown:hover .dropdownContent {display: block;}
+
+header {position: fixed; width: 100%;}
 
 /* Confiurações Header */
-
-    header {display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: var(--header);}
+    .menu {display: flex; align-items: center; justify-content: end; padding: 10px 20px; background-color: var(--headerBackground);}
+    .menu button {font-size: medium;}
 
     /* Configuração do menu esquerdo */
-        .menuLeft {display: flex; flex-direction: row; gap: 10px;}
-        .menuLeft a {display: flex; justify-content: center; align-items: center; width: 100px; height: 40px; background-color: var(--header); text-decoration: none; color: var(--font); font-weight: bold;}
-        .menuLeft a:hover {background-color: var(--background);}
+        .menuLeft {display: flex; flex-direction: row; gap: 50px;}
+        .menuLeft button {display: flex; height: 40px; align-items: center; justify-content: center; font-weight: bold; text-decoration: none; color: var(--font); background-color: var(--headerBackground);}
+        .menuLeft button:hover {margin: auto; color: var(--line);}
 
     /* Configuração do menu direito */
         .menuRight {display: flex; gap: 25px;} 
-        .menuRight img {width: 20px; margin: 0;}
+        .menuRight img {width: 20px;}
+        .menuRight .headerButton {background-color: var(--header); cursor: pointer;}
+        .menuRight .headerButton:hover {margin: auto; transform: scale(1.2);}
 
         /* Configuração do menu de idiomas */
-            .menuRight .dropdown {position: relative;}
-            .menuRight .dropdownButton {background-color: var(--header); cursor: pointer; border-radius: 100%; padding: 25%;}
-            .menuRight .dropdownContent {display: none; position: fixed; right: 0; background-color: var(--paperColor); box-shadow: 0px 8px 16px var(--header); border-radius: 5px; z-index: 1; width: 125px;}
-            .menuRight .dropdownContent button {background-color: var(--background); color: var(--font); width: 100%; text-decoration: none; padding: 10px 15px; display: flex; justify-content: center; border-radius: none; gap: 10px; cursor: pointer;}
+            .menuRight .dropdownContent {display: none; width: 140px; align-items: left; position: absolute; right: -50px; box-shadow: 0px 8px 16px var(--header); z-index: 1; background-color: var(--paperBackground);}
+            .menuRight .dropdownContent button {display: flex; width: 100%; padding: 10px 15px; gap: 10px; border-radius: none; font-size: medium; text-decoration: none; color: var(--font); background-color: var(--background); cursor: pointer;}
             .menuRight .dropdownContent button:hover {background-color: var(--header);}
-            .menuRight .dropdown:hover .dropdownContent {display: block;}
-        
-        /* Botão de tema claro/escuro */
-            .menuRight .buttonTheme {border-radius: 100%; padding: 10%; background-color: var(--header);}
-            .menuRight .buttonTheme:hover {background-color: var(--background);}
 
-/* Configurações Main */
+/* Configurações Página */
+    main .container {scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll;}
+    main .section {display: flex; height: 100vh; align-items: center; justify-content: center; scroll-snap-align: start; background-color: var(--pageBackground);}
 
-    main {width: 96%; margin: auto; padding: 2%; display: block; text-align: justify; max-width: 595px; background-color: var(--paperColor);}
+    /* Sobre */
+        .section .about {max-width: 595px; font-size: 1.5em;}
 
-    h1 {font-size: larger; text-align: left; padding-top: 5px;  padding-bottom: 2.5px;}
-    h2 {font-size: large; text-align: left; padding-top: 5px; padding-bottom: 2.5px;}
-    h3 {font-size: medium; text-align: left; padding-top: 5px; padding-bottom: 2.5px;}
-    p {font-size: medium; text-align: justify; padding-top: 2px; padding-bottom: 1px;}
-    img {display: block; margin: auto; max-width: 600px;   height: auto; max-width: 600px;}
+    /* Competencias */
+        .section .skill  {display: block; width: 1080px; height: 480px; border-bottom: 25%; background-color: var(--paperBackground);}
 
-    .easteregg{display: none; margin-top: 20px; max-width: 100%; height: auto;}
+        /* Configuração menu superior */
+            .section .skill .menu {display: flex; width: auto; height: auto; justify-content: start; gap: 50px;}
+            .section .skill .menu button {font-size: large; width: 50%; font-weight: bold; color: var(--font); background-color: var(--headerBackground);}
+            .section .skill .menu button:hover {cursor: pointer; color: var(--line);}
 
-/* Confiurações Footer */
-    footer {width: 96%; margin: auto; padding: 2%; display: block; text-align: justify; max-width: 595px; background-color: none;}
+        /* Configuração container de imagens */
+            .skill .container {display: block; width: 95%; height: 80%; margin: 25px auto; overflow: hidden;}
+            .skill .skillContainer {display: grid; grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: minmax(20px, auto); row-gap: 50px; justify-items: center; padding: 1%;}
+
+            .skill .skillLogo {display: flex; max-width: 300px; max-height: 80px; justify-content: left; position: relative;}
+            .skill .skillLogo .border {box-shadow: 0px -0px 16px 4px var(--line); border-radius: 10%;}
+            
+            .skill .skillLogo img {display: block; width: 100%; height: 100%; object-fit: auto; padding: 15%;}
+            
+            .skill .skillLogo .dropdownContent{display: none; width: 480px; height: auto; position: absolute; top: 100%; left: 0; z-index: 1; background-color: var(--headerBackground); border-radius: 25px;}
+            .skill .skillLogo:hover .dropdownContent {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr ; grid-auto-rows: minmax(50px, auto); row-gap: 25px; column-gap: 50px; justify-items: center;}
+            .skill .skillLogo:hover .dropdownContent img {display: block; width: 95%; height: 95%; object-fit: auto; padding: 15%;}
+
+    
 
 /* Configuraçoes utilitários */
-
-.linhaHorizontal {background-color: var(--font); width: 100%; height: 1.5px;}
-.separador {height: 0px;}
+.linhaHorizontal {background-color: var(--line); width: 100%; height: 1.5px;}
+.linhaVertical {background-color: var(--font); width: 1.5px; height: 25px; margin: auto 25px}
+.separador {height: 20px;}
+.easteregg {display: none; margin-top: 20px; max-width: 100%; height: auto;}
+.easteregg img {display: block; margin: auto; max-width: 600px;   height: auto; max-width: 600px;}
+/* .menu .active {color: var(--line);} */
