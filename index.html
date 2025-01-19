@@ -1,131 +1,92 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR">
+<html lang="pt-br">
     <!--Clique 10 vezes na página-->
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portifólio - João Pereira</title>
+        <title>Portifólio - João Vitor</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/estilo.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
         <!-- Traduzir -->
         <script src="scripts/traduzirPagina.js"></script>
 
         <!-- Tema -->
-        <!-- <script src="scripts/mudarTema.js"></script> -->
+        <script src="scripts/mudarTema.js"></script>
 
-        <!-- Scroll -->
-         <script src="scripts/scroll.js"></script>
-
-         <!-- Ativar botão -->
-         <!-- <script src="scripts/buttonActive.js"></script> -->
-
-         <!-- Janela ativa -->
-        <!-- <script src="scripts/activeSection.js"></script> -->
+        <!-- Conteúdo -->
+         <script src="scripts/updateContent.js"></script>
     </head>
 
     <body>
-        <!-- Header -->
         <header>
-            <div class="menu">
-                <!-- Menu de navegação à esquerda -->
-                <div class="menuLeft">
-                    <button data-translate="headInfo1" onclick="scrollInto('about')">Sobre</button>
-                    <button data-translate="headInfo2" onclick="scrollInto('skill')">Habilidades</button>
-                    <button data-translate="headInfo3" onclick="scrollInto('project')">Projetos</button>
-                    <button data-translate="headInfo4" onclick="scrollInto('contact')">Contatos</button>
+            <div class="authorHeader">
+                <a href="/home" onclick="loadPage(event, 'home')" class="authorLink" data-translate="headInfo1">Início</a>
+            </div>
+
+            <div class="pageHeader">
+                <a href="/resume" onclick="loadPage(event, 'resume')" data-translate="headInfo2"></a>
+                <a href="/portfolio" onclick="loadPage(event, 'portfolio')" data-translate="headInfo3"></a>
+                <a href="/certificates" onclick="loadPage(event, 'certificates')" data-translate="headInfo4"></a>
+            </div>
+
+            <div class="menuHeader">
+                <!-- Menu de Idiomas -->
+                <div class="dropdown">
+                    <button>
+                        <img id="languageFlag" src="img/flagBrazil.png" alt="pt-br">
+                    </button>
+                    <div class="dropdownContent">
+                        <button onclick="changeLanguage('pt-br')" data-language="pt-br">
+                            <img src="img/flagBrazil.png" alt="Português">
+                            <span data-translate="headInfo5">Português</span>
+                        </button>
+                        <button onclick="changeLanguage('en')" data-language="en">
+                            <img src="img/flagUsa.png" alt="Inglês">
+                            <span data-translate="headInfo6">Inglês</span>
+                        </button>
+                    </div>
                 </div>
 
-                <div class="linhaVertical"></div>
-
-                <!-- Menu de idiomas e temas à direita -->
-                <div class="menuRight">
-
-                    <!-- Menu de Idiomas -->
-                    <div class="dropdown">
-                        <button class="headerButton">
-                            <img id="languageFlag" src="img/flagBrazil.png" alt="pt-br">
-                        </button>
-                        <div class="dropdownContent">
-                            <button onclick="changeLanguage('pt-br')" data-language="pt-br">
-                                <img src="img/flagBrazil.png" alt="Português">
-                                <span data-translate="headInfo5">Português</span>
-                            </button>
-                            <button onclick="changeLanguage('es')" data-language="es">
-                                <img src="img/flagSpain.png" alt="Espanhol">
-                                <span data-translate="headInfo6">Espanhol</span>
-                            </button>
-                            <button onclick="changeLanguage('en')" data-language="en">
-                                <img src="img/flagUsa.png" alt="Inglês">
-                                <span data-translate="headInfo7">Inglês</span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Botão de temas -->
-                    <button class="headerButton" id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
-                        <img id="themeIcon" src="img/darkMode.png" alt="lightMode">
+                <!-- Botão de temas -->
+                 <div>
+                    <button id="buttonTheme" onclick="changeTheme(this)" data-mode="lightMode">
+                        <img id="themeIcon" src="img/lightMode.png" alt="lightMode">
                     </button>
                 </div>
             </div>
-            <div class="linhaHorizontal"></div>
         </header>
 
         <main>
-            <div class="container">
 
-                <!-- Sobre -->
-                <section class="section">
-                    <div id="about" class="about">
-                        <p data-translate="aboutTextP1">xxxx</p>
-                        <p data-translate="aboutTextP2">xxxx</p>
+            <!-- Painel esquerdo -->
+            <div class="authorPanel">
+                <div class="authorPhoto"></div>
+                <div class="authorInfo1">
+                    <div class="authorName">Vitor Figueira Montenegro</div>
+                    <div class="authorRole"><span data-translate="authorInfo1">Analista de Dados</span></div>
+                </div>
+
+                <div class="authorInfo2">
+                    <div class="authorLoc"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro - RJ</div>
+                    <div class="link">
+                        <img src="img/logoLinkedin.png" alt="">
+                        <a href="https://www.linkedin.com/in/joaovfmpereira" target="_blank"> LinkedIn</a>
                     </div>
-                </section>
-
-                <!-- Competências -->
-                <section class="section">
-                    <div id="skill" class="skill">
-                        <div class="menu">
-                            <button class="active">Linguagens</button>
-                            <div class="linhaVertical"></div>
-                            <button>Programas</button>
-                        </div>
-
-                        <div class="linhaHorizontal"></div>
-
-                        <div class="container">
-                            <div class="skillContainer">
-                                <div class="skillLogo">
-                                    <img src="img/logoPython.png" alt="" class="border">
-                                    <div class="dropdownContent">
-                                        <img src="img/logoPandas.png" alt="">
-                                        <img src="img/logoSeaborn.png" alt="">
-                                        <img src="img/logoMatplotlib.png" alt="">
-                                        <img src="img/logoSelenium.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="skillLogo"><img src="img/logoR.png" alt=""></div>
-                                <div class="skillLogo"><img src="img/logoVBA.png" alt=""></div>
-                                <div class="skillLogo"><img src="img/logoJS.png" alt=""></div>
-                                <div class="skillLogo"><img src="img/logoHTML.png" alt=""></div>
-                                <div class="skillLogo"><img src="img/logoCSS.png" alt=""></div>
-                            </div>
-                        </div>
+                    <div class="link">
+                        <img src="img/logoGithub.png" alt="">
+                        <a href="https://github.com/ragrora" target="_blank"> Github</a>
                     </div>
-                </section>
-
-                <!-- Projetos -->
-                <section class="section">
-                    <div id="project">Projetos</div>
-                </section>
-
-                <!-- Contatos -->
-                <section class="section">
-                    <div  id="contact">Contatos</div>
-                </section>
+                </div>
             </div>
+
+            <!-- Painel direito -->
+            <div class="pagePanel" id="content"></div>
         </main>
+
+        <footer>
+            <p>&copy; 2025 João Vitor Figueira Montenegro Pereira.</p>
+        </footer>
     </body>
-    <!-- Easteregg -->
-    <script src="scripts/easteregg.js"></script>
 </html>

@@ -1,80 +1,66 @@
 :root {
-    --headerBackground: #141414; /* var(--header) */
-
-    --pageBackground: #000000;
-
-    --paperBackground: #282828;
-
-    --font: #dddddd;
-
-    --line: #7a08ec;
+    --font1: #808080;
+    --font2: #a9a9a9;
+    --font3: #000000;
+    --font4: #494e52;
+    --background: #f0f0f0;
 }
 
-* {margin: 0; border: 0; padding: 0;}
+html {background-color: var(--background); font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
-html {font-family: Arial, Helvetica, sans-serif; color: var(--font); background-color: var(--pageBackground);}
+header {display: flex; width: 1080px; height: 50px; margin: auto; font-size: 24px; border-bottom: 2px solid #d3d3d3;}
 
-body {margin: 0; text-align: justify; overflow: hidden;}
+main {display: flex; width: 1080px; height: 30px; margin: 10px auto; justify-content: space-between; text-align: justify;}
 
-body .dropdown {position: relative; margin: auto;}
-body .dropdown:hover .dropdownContent {display: block;}
+footer {position: fixed; bottom: 0; left: 0; width: 100%; text-align: right; border-top: 2px solid lightgray; background-color: var(--background); color: var(--font3);}
+footer p {padding-right: 25px;}
 
-header {position: fixed; width: 100%;}
+ul, li {color: var(--font4);}
 
-/* Confiurações Header */
-    .menu {display: flex; align-items: center; justify-content: end; padding: 10px 20px; background-color: var(--headerBackground);}
-    .menu button {font-size: medium;}
+/* Menu do header */
+    .authorHeader {display: flex; width: 425px; margin: auto; justify-content: center;}
+    .authorHeader .authorLink {font-size: 20px; color: var(--font1); text-decoration: none; font-weight: bold;}
+    .authorHeader .authorLink:hover {scale: 1.1;}
 
-    /* Configuração do menu esquerdo */
-        .menuLeft {display: flex; flex-direction: row; gap: 50px;}
-        .menuLeft button {display: flex; height: 40px; align-items: center; justify-content: center; font-weight: bold; text-decoration: none; color: var(--font); background-color: var(--headerBackground);}
-        .menuLeft button:hover {margin: auto; color: var(--line);}
+    .pageHeader {display: flex; width: 100%; margin: auto; gap: 25px;}
+    .pageHeader a {font-size: 18px; color: var(--font1); text-decoration: none; margin: auto 25px;}
+    .pageHeader a:hover {scale: 1.1;}
 
-    /* Configuração do menu direito */
-        .menuRight {display: flex; gap: 25px;} 
-        .menuRight img {width: 20px;}
-        .menuRight .headerButton {background-color: var(--header); cursor: pointer;}
-        .menuRight .headerButton:hover {margin: auto; transform: scale(1.2);}
+    .menuHeader {display: flex; width: 100px; margin: auto; gap: 18px; justify-items: center;}
+    .menuHeader button {border: none; width: 30px; height: 30px; cursor: pointer; background-color: var(--background);}
+    .menuHeader img {width: 100%; height: auto; background-size: cover; border-radius: 100%;}
 
-        /* Configuração do menu de idiomas */
-            .menuRight .dropdownContent {display: none; width: 140px; align-items: left; position: absolute; right: -50px; box-shadow: 0px 8px 16px var(--header); z-index: 1; background-color: var(--paperBackground);}
-            .menuRight .dropdownContent button {display: flex; width: 100%; padding: 10px 15px; gap: 10px; border-radius: none; font-size: medium; text-decoration: none; color: var(--font); background-color: var(--background); cursor: pointer;}
-            .menuRight .dropdownContent button:hover {background-color: var(--header);}
-
-/* Configurações Página */
-    main .container {scroll-snap-type: y mandatory; height: 100vh; overflow-y: scroll;}
-    main .section {display: flex; height: 100vh; align-items: center; justify-content: center; scroll-snap-align: start; background-color: var(--pageBackground);}
-
-    /* Sobre */
-        .section .about {max-width: 595px; font-size: 1.5em;}
-
-    /* Competencias */
-        .section .skill  {display: block; width: 1080px; height: 480px; border-bottom: 25%; background-color: var(--paperBackground);}
-
-        /* Configuração menu superior */
-            .section .skill .menu {display: flex; width: auto; height: auto; justify-content: start; gap: 50px;}
-            .section .skill .menu button {font-size: large; width: 50%; font-weight: bold; color: var(--font); background-color: var(--headerBackground);}
-            .section .skill .menu button:hover {cursor: pointer; color: var(--line);}
-
-        /* Configuração container de imagens */
-            .skill .container {display: block; width: 95%; height: 80%; margin: 25px auto; overflow: hidden;}
-            .skill .skillContainer {display: grid; grid-template-columns: 1fr 1fr 1fr; grid-auto-rows: minmax(20px, auto); row-gap: 50px; justify-items: center; padding: 1%;}
-
-            .skill .skillLogo {display: flex; max-width: 300px; max-height: 80px; justify-content: left; position: relative;}
-            .skill .skillLogo .border {box-shadow: 0px -0px 16px 4px var(--line); border-radius: 10%;}
-            
-            .skill .skillLogo img {display: block; width: 100%; height: 100%; object-fit: auto; padding: 15%;}
-            
-            .skill .skillLogo .dropdownContent{display: none; width: 480px; height: auto; position: absolute; top: 100%; left: 0; z-index: 1; background-color: var(--headerBackground); border-radius: 25px;}
-            .skill .skillLogo:hover .dropdownContent {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr ; grid-auto-rows: minmax(50px, auto); row-gap: 25px; column-gap: 50px; justify-items: center;}
-            .skill .skillLogo:hover .dropdownContent img {display: block; width: 95%; height: 95%; object-fit: auto; padding: 15%;}
-
+    .dropdown {position: relative;}
+    .dropdown:hover .dropdownContent {display: block;}
+    
+    .dropdownContent {display: none; position: fixed; justify-content: center; background-color: black; box-shadow: 0px 8px 16px var(--font2); border-radius: 5px; z-index: 1; width: 125px; height: auto;}
+    .dropdownContent img {width: 20px; height: auto;}
+    
+    .dropdownContent button {display: flex; color: var(--font4); width: 100%; justify-content: center; padding: 5px; border-radius: none; gap: 10px; cursor: pointer;}
+    .dropdownContent button:hover {cursor: pointer; background-color: var(--font2);}
     
 
-/* Configuraçoes utilitários */
-.linhaHorizontal {background-color: var(--line); width: 100%; height: 1.5px;}
-.linhaVertical {background-color: var(--font); width: 1.5px; height: 25px; margin: auto 25px}
-.separador {height: 20px;}
-.easteregg {display: none; margin-top: 20px; max-width: 100%; height: auto;}
-.easteregg img {display: block; margin: auto; max-width: 600px;   height: auto; max-width: 600px;}
-/* .menu .active {color: var(--line);} */
+/* Painel do autor */
+    .authorPanel {display: block; width: 225px; height: 100vh; padding: 1%; position: fixed; justify-items: center;}
+    
+    .authorPanel .authorPhoto {width: 80%; height: 180px; margin: 20px 0 10px 0; margin-bottom: -1px; border-radius: 100%; background-color: greenyellow; border: 2px solid black;}
+    .authorPanel img {width: 18px; height: 18px; border-radius: 100%;}
+
+    .authorPanel .authorInfo1 {text-align: center;}
+    .authorInfo1 .authorName {font-size: 18px; color: var(--font3);}
+    .authorInfo1 .authorRole {font-size: 16px; color: var(--font1);}
+
+    .authorPanel .authorInfo2 {margin: 20px; justify-items: center; color: var(--font3);}
+    .authorInfo2 .link {display: flex; align-items: center; padding: 1%;}
+    .authorInfo2 a {text-decoration: none; color: var(--font3);}
+    .authorInfo2 a:hover {text-decoration: underline;}
+
+/* Painel de conteúdo */
+    .pagePanel {display: block; width: 100%; height: 100vh; margin-left: 283px; padding: 1%;}
+
+    .pagePanel h1 {color: var(--font4); font-size: 24px;}
+    .pagePanel h2 {color: var(--font4); font-size: 18px; font-weight: normal;}
+    .pagePanel h3 {color: var(--font4); font-size: 16px; font-weight: normal;}
+
+/* Espaçador */
+.separador {display: block; width: 100%; height: 500px;}

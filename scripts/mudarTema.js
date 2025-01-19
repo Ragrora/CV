@@ -1,37 +1,31 @@
 function changeTheme(button) {
     const mode = button.dataset.mode
     const themeIcon = document.getElementById("themeIcon");
-    const downloadIcon = document.getElementById("downloadIcon");
     const root = document.documentElement;
 
     if (mode === "lightMode") {
         themeIcon.src = "img/darkMode.png";
         themeIcon.alt = "darkMode";
 
-        downloadIcon.src = "img/downloadDark.png"
-        downloadIcon.alt = "download"
-
         button.dataset.mode = "darkMode";
 
-        root.style.setProperty('--font', '#808080')
-        root.style.setProperty('--header', '#000000')
-        root.style.setProperty('--background', '#1A1A1A')
-        root.style.setProperty('--paperColor', '#2F2F2F')
-        
+        root.style.setProperty('--font1', '#7f7f7f')
+        root.style.setProperty('--font2', '#565656')
+        root.style.setProperty('--font3', '#ffffff')
+        root.style.setProperty('--font4', '#b6b1ad')
+        root.style.setProperty('--background', '#0f0f0f')   
 
     } else if (mode === "darkMode") {
         themeIcon.src = "img/lightMode.png";
         themeIcon.alt = "lightMode";
 
-        downloadIcon.src = "img/downloadLight.png"
-        downloadIcon.alt = "download"
-
         button.dataset.mode = "lightMode";
 
-        root.style.setProperty('--font', '#000000')
-        root.style.setProperty('--header', '#808080')
-        root.style.setProperty('--background', '#d3d3d3')
-        root.style.setProperty('--paperColor', '#f5f5f5')
+        root.style.setProperty('--font1', '#808080')
+        root.style.setProperty('--font2', '#a9a9a9')
+        root.style.setProperty('--font3', '#000000')
+        root.style.setProperty('--font4', '#494e52')
+        root.style.setProperty('--background', '#f0f0f0')    
     }
 
     localStorage.setItem("mode", button.dataset.mode);
