@@ -124,23 +124,23 @@ function changeLanguage(language) {
             "pt-br": "Power BI, Tableau, Looker",
             "en": "Power BI, Tableau, Looker"
         },        
-        "resumeText14": {
+        "resumeText11": {
             "pt-br": "Pensamento crítico e resolução de problemas",
             "en": "Critical thinking and problem-solving"
         },
-        "resumeText15": {
+        "resumeText12": {
             "pt-br": "Comunicação",
             "en": "Communication"
         },
-        "resumeText16": {
+        "resumeText13": {
             "pt-br": "Trabalho em equipe",
             "en": "Teamwork"
         },
-        "resumeText17": {
+        "resumeText14": {
             "pt-br": "Adaptabilidade",
             "en": "Adaptability"
         },
-        "resumeText17": {
+        "resumeText15": {
             "pt-br": "Inteligência emocional",
             "en": "Emotional intelligence"
         },
