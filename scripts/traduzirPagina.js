@@ -77,8 +77,12 @@ function changeLanguage(language) {
             "en": "Education"
         },
         "resumeTitle3": {
-            "pt-br": "Competências",
-            "en": "Skills"
+            "pt-br": "Competências Técnicas",
+            "en": "Hard Skills"
+        },
+        "resumeTitle4": {
+            "pt-br": "Competências Comportamentais",
+            "en": "Soft Skills"
         },
         "resumeText1": {
             "pt-br": "Epiroc - Estagiário (fevereiro/2023 - setembro/2024).",
@@ -97,38 +101,49 @@ function changeLanguage(language) {
             "en": "Python"
         },
         "resumeText5": {
-            "pt-br": "Pandas, Selenium, Openpyxl, Numpy, Seaborn, Matplotlib, Pyodbc, TensorFlow",
-            "en": "Pandas, Selenium, Openpyxl, Numpy, Seaborn, Matplotlib, Pyodbc, TensorFlow"
+            "pt-br": "A preencher",
+            "en": "To be filled"
         },
         "resumeText6": {
             "pt-br": "R",
             "en": "R"
         },
         "resumeText7": {
-            "pt-br": "Markdown, dplry, ggplot2, tidyr, tseries, lmtest, forecast",
-            "en": "Markdown, dplry, ggplot2, tidyr, tseries, lmtest, forecast"
+            "pt-br": "A preencher",
+            "en": "To be filled"
         },
         "resumeText8": {
             "pt-br": "SQL",
             "en": "SQL"
         },
         "resumeText9": {
-            "pt-br": "Power BI",
-            "en": "Power Bi"
+            "pt-br": "Visualização de Dados",
+            "en": "Data Visualization"
         },
         "resumeText10": {
-            "pt-br": "JavaScript",
-            "en": "JavaScript"
+            "pt-br": "Power BI, Tableau, Looker",
+            "en": "Power BI, Tableau, Looker"
+        },        
+        "resumeText14": {
+            "pt-br": "Pensamento crítico e resolução de problemas",
+            "en": "Critical thinking and problem-solving"
         },
-        "resumeText11": {
-            "pt-br": "HTML5",
-            "en": "HTML5"
+        "resumeText15": {
+            "pt-br": "Comunicação",
+            "en": "Communication"
         },
-        "resumeText12": {
-            "pt-br": "CSS",
-            "en": "CSS"
+        "resumeText16": {
+            "pt-br": "Trabalho em equipe",
+            "en": "Teamwork"
         },
-
+        "resumeText17": {
+            "pt-br": "Adaptabilidade",
+            "en": "Adaptability"
+        },
+        "resumeText17": {
+            "pt-br": "Inteligência emocional",
+            "en": "Emotional intelligence"
+        },
 
         // Portifólio
         "portInfo1": {
@@ -146,8 +161,8 @@ function changeLanguage(language) {
 
         // Certificados
         "certInfo1": {
-            "pt-br": "Portfólio",
-            "en": "Portfolio"
+            "pt-br": "Certificados",
+            "en": "Certificates"
         },
         "certTitle1": {
             "pt-br": "Item 1",
