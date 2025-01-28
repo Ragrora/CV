@@ -101,8 +101,8 @@ function changeLanguage(language) {
             "en": "Python"
         },
         "resumeText5": {
-            "pt-br": "A preencher",
-            "en": "To be filled"
+            "pt-br": "Numpy, Pandas, Matplotlib, Seaborn, Scikit-Learn e TensorFlow",
+            "en": "Numpy, Pandas, Matplotlib, Seaborn, Scikit-Learn e TensorFlow"
         },
         "resumeText6": {
             "pt-br": "R",
@@ -165,12 +165,12 @@ function changeLanguage(language) {
             "en": "Certificates"
         },
         "certTitle1": {
-            "pt-br": "Item 1",
-            "en": "Item 1"
+            "pt-br": "Fundamento de Data Science e Inteligência Artificial - Data Science Academy (24h)",
+            "en": "Fundamentals of Data Science and Artificial Intelligence - Data Science Academy (24h)"
         },
         "certText1": {
-            "pt-br": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas maximus ultricies. Duis gravida ut turpis non auctor. Nunc consequat consequat dignissim. Etiam quam lorem, placerat sed dapibus ac, aliquam non orci. Mauris nec leo eu est molestie laoreet sit amet ut dolor. Vestibulum aliquam, turpis et tristique pulvinar, quam.",
-            "en":  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas maximus ultricies. Duis gravida ut turpis non auctor. Nunc consequat consequat dignissim. Etiam quam lorem, placerat sed dapibus ac, aliquam non orci. Mauris nec leo eu est molestie laoreet sit amet ut dolor. Vestibulum aliquam, turpis et tristique pulvinar, quam."
+            "pt-br": "O curso de Fundamentos de Data Science e Inteligência Artificial ensina conceitos essenciais e técnicas modernas, como coleta, processamento e análise de dados. Aborda algoritmos de aprendizado de máquina, redes neurais e metodologias de IA para resolver problemas reais. Com foco teórico e prático, é ideal para quem busca aprofundar conhecimentos técnicos e se preparar para cursos avançados na área.",
+            "en":  "The Fundamentals of Data Science and Artificial Intelligence course teaches essential concepts and modern techniques, such as data collection, processing, and analysis. It covers machine learning algorithms, neural networks, and AI methodologies to solve real-world problems. With a theoretical and practical focus, it is ideal for those seeking to deepen their technical knowledge and prepare for advanced courses in the field."
         }
     }
 
